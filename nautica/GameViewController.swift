@@ -11,7 +11,10 @@ import QuartzCore
 import SceneKit
 
 class GameViewController: UIViewController {
-
+    var ship: SCNNode!
+    var camera: SCNNode!
+    let scene = SCNScene()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,21 +44,23 @@ class GameViewController: UIViewController {
         scene.rootNode.addChildNode(ambientLightNode)
         
         // retrieve the ship node
-        let ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
+        ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
+//        ship.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
         
-        ship.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
-        
-        // animate the 3d object
-        ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
+        let lookAtConstraint = SCNLookAtConstraint(target: ship)
+
+        let distanceConstraint = SCNDistanceConstraint(target: ship)
+        distanceConstraint.minimumDistance = 5 // set to whatever minimum distance between the camera and aircraft you'd like
+        distanceConstraint.maximumDistance = 15 // set to whatever maximum distance between the camera and aircraft you'd like
+
+        cameraNode.constraints = [lookAtConstraint, distanceConstraint]
         
         // retrieve the SCNView
         let scnView = self.view as! SCNView
         
         // set the scene to the view
         scnView.scene = scene
-        
-        // allows the user to manipulate the camera
-        scnView.allowsCameraControl = true
+        scene.rootNode.addChildNode(ship)
         
         // show statistics such as fps and timing information
         scnView.showsStatistics = true
@@ -67,48 +72,57 @@ class GameViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         scnView.addGestureRecognizer(tapGesture)
         
-            
-        let sview = (self.view as! SCNView)
-        sview.overlaySKScene = JoystickOverlay(size: sview.frame.size, master: self)
+        scnView.overlaySKScene = JoystickOverlay(size: scnView.frame.size, master: self)
+        scnView.allowsCameraControl = false
+        
+        let box = SCNBox(width: 1, height: 1, length: 0.3, chamferRadius: 0.1)
+        let mat = SCNMaterial()
+        mat.emission.contents = UIColor.red
+        box.materials = [mat]
+        let boxNode = SCNNode(geometry: box)
+        boxNode.position = SCNVector3(x: 5, y: 5, z: 5)
+        scene.rootNode.addChildNode(boxNode)
     }
     
     @objc func handleTap(_ gestureRecognize: UIGestureRecognizer) {
-        // retrieve the SCNView
-        let scnView = self.view as! SCNView
-        
-        // check what nodes are tapped
-        let p = gestureRecognize.location(in: scnView)
-        let hitResults = scnView.hitTest(p, options: [:])
-        // check that we clicked on at least one object
-        if hitResults.count > 0 {
-            // retrieved the first clicked object
-            let result = hitResults[0]
-            
-            // get its material
-            let material = result.node.geometry!.firstMaterial!
-            
-            // highlight it
-            SCNTransaction.begin()
-            SCNTransaction.animationDuration = 0.5
-            
-            // on completion - unhighlight
-            SCNTransaction.completionBlock = {
-                SCNTransaction.begin()
-                SCNTransaction.animationDuration = 0.5
-                
-                material.emission.contents = UIColor.black
-                
-                SCNTransaction.commit()
-            }
-            
-            material.emission.contents = UIColor.red
-            
-            SCNTransaction.commit()
-        }
+//        // retrieve the SCNView
+//        let scnView = self.view as! SCNView
+//
+//        // check what nodes are tapped
+//        let p = gestureRecognize.location(in: scnView)
+//        let hitResults = scnView.hitTest(p, options: [:])
+//        // check that we clicked on at least one object
+//        if hitResults.count > 0 {
+//            // retrieved the first clicked object
+//            let result = hitResults[0]
+//
+//            // get its material
+//            let material = result.node.geometry!.firstMaterial!
+//
+//            // highlight it
+//            SCNTransaction.begin()
+//            SCNTransaction.animationDuration = 0.5
+//
+//            // on completion - unhighlight
+//            SCNTransaction.completionBlock = {
+//                SCNTransaction.begin()
+//                SCNTransaction.animationDuration = 0.5
+//
+//                material.emission.contents = UIColor.black
+//
+//                SCNTransaction.commit()
+//            }
+//
+//            material.emission.contents = UIColor.red
+//
+//            SCNTransaction.commit()
+//        }
     }
     
     @objc func handleMove(joystick: TLAnalogJoystick) {
         print("received move", joystick.velocity)
+        
+        ship.runAction(SCNAction.moveBy(x: joystick.velocity.x / 50, y: joystick.velocity.y / 50, z: 0, duration: 1))
     }
     
     @objc func handleRotate(joystick: TLAnalogJoystick) {
@@ -127,10 +141,8 @@ class GameViewController: UIViewController {
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
             return .landscape
-//            return .allButUpsideDown
         } else {
             return .all
         }
     }
-
 }

@@ -67,7 +67,9 @@ class GameViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         scnView.addGestureRecognizer(tapGesture)
         
-        (self.view as! SCNView).overlaySKScene = JoystickOverlay()
+            
+        let sview = (self.view as! SCNView)
+        sview.overlaySKScene = JoystickOverlay(size: sview.frame.size, master: self)
     }
     
     @objc func handleTap(_ gestureRecognize: UIGestureRecognizer) {
@@ -103,6 +105,15 @@ class GameViewController: UIViewController {
             
             SCNTransaction.commit()
         }
+    }
+    
+    @objc func handleMove(joystick: TLAnalogJoystick) {
+        print("received move", joystick.velocity)
+    }
+    
+    @objc func handleRotate(joystick: TLAnalogJoystick) {
+        print("received rotate", joystick.angular)
+        
     }
     
     override var shouldAutorotate: Bool {

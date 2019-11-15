@@ -26,6 +26,19 @@ class JoystickOverlay: SKScene {
     }
     
     override func didMove(to view: SKView) {
+        let moveJoystickHiddenArea = TLAnalogJoystickHiddenArea(rect: CGRect(x: 0, y: 0, width: frame.midX, height: frame.height))
+        moveJoystickHiddenArea.joystick = moveJoystick
+        addChild(moveJoystickHiddenArea)
+        
+        let rotateJoystickHiddenArea = TLAnalogJoystickHiddenArea(rect: CGRect(x: frame.midX, y: 0, width: frame.midX, height: frame.height))
+        rotateJoystickHiddenArea.joystick = rotateJoystick
+        addChild(rotateJoystickHiddenArea)
+        
+        moveJoystick.handleImage = UIImage(named: "joystick")
+        moveJoystick.baseImage = UIImage(named: "dpad")
+        rotateJoystick.handleImage = UIImage(named: "joystick")
+        rotateJoystick.baseImage = UIImage(named: "dpad")
+        
         moveJoystick.on(.begin) { [unowned self] _ in
         }
         

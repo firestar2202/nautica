@@ -43,6 +43,8 @@ class GameViewController: UIViewController {
         // retrieve the ship node
         let ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
         
+        ship.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
+        
         // animate the 3d object
         ship.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
         
@@ -64,10 +66,11 @@ class GameViewController: UIViewController {
         // add a tap gesture recognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         scnView.addGestureRecognizer(tapGesture)
+        
+        (self.view as! SCNView).overlaySKScene = JoystickOverlay()
     }
     
-    @objc
-    func handleTap(_ gestureRecognize: UIGestureRecognizer) {
+    @objc func handleTap(_ gestureRecognize: UIGestureRecognizer) {
         // retrieve the SCNView
         let scnView = self.view as! SCNView
         

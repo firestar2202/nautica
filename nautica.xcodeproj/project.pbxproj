@@ -15,6 +15,8 @@
 		F93452B6237F200D0042219B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F93452B4237F200D0042219B /* LaunchScreen.storyboard */; };
 		F93452C1237F200D0042219B /* nauticaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93452C0237F200D0042219B /* nauticaTests.swift */; };
 		F93452CC237F200D0042219B /* nauticaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93452CB237F200D0042219B /* nauticaUITests.swift */; };
+		F93452DA237F2E6F0042219B /* Joystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93452D9237F2E6F0042219B /* Joystick.swift */; };
+		F93452DC237F2FFF0042219B /* JoystickOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93452DB237F2FFF0042219B /* JoystickOverlay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		F93452C7237F200D0042219B /* nauticaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nauticaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93452CB237F200D0042219B /* nauticaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nauticaUITests.swift; sourceTree = "<group>"; };
 		F93452CD237F200D0042219B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F93452D9237F2E6F0042219B /* Joystick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joystick.swift; sourceTree = "<group>"; };
+		F93452DB237F2FFF0042219B /* JoystickOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoystickOverlay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				F93452B2237F200D0042219B /* Assets.xcassets */,
 				F93452B4237F200D0042219B /* LaunchScreen.storyboard */,
 				F93452B7237F200D0042219B /* Info.plist */,
+				F93452D9237F2E6F0042219B /* Joystick.swift */,
+				F93452DB237F2FFF0042219B /* JoystickOverlay.swift */,
 			);
 			path = nautica;
 			sourceTree = "<group>";
@@ -260,7 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F93452DA237F2E6F0042219B /* Joystick.swift in Sources */,
 				F93452AE237F20090042219B /* GameViewController.swift in Sources */,
+				F93452DC237F2FFF0042219B /* JoystickOverlay.swift in Sources */,
 				F93452AA237F20090042219B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,7 +17,6 @@ class JoystickOverlay: SKScene {
     
     init(size: CGSize, master: GameViewController) {
         super.init(size: size)
-        
         self.master = master
     }
     
@@ -27,10 +26,12 @@ class JoystickOverlay: SKScene {
     
     override func didMove(to view: SKView) {
         let moveJoystickHiddenArea = TLAnalogJoystickHiddenArea(rect: CGRect(x: 0, y: 0, width: frame.midX, height: frame.height))
+        moveJoystickHiddenArea.lineWidth = 0
         moveJoystickHiddenArea.joystick = moveJoystick
         addChild(moveJoystickHiddenArea)
         
         let rotateJoystickHiddenArea = TLAnalogJoystickHiddenArea(rect: CGRect(x: frame.midX, y: 0, width: frame.midX, height: frame.height))
+        rotateJoystickHiddenArea.lineWidth = 0
         rotateJoystickHiddenArea.joystick = rotateJoystick
         addChild(rotateJoystickHiddenArea)
         
@@ -38,22 +39,10 @@ class JoystickOverlay: SKScene {
         moveJoystick.baseImage = UIImage(named: "dpad")
         rotateJoystick.handleImage = UIImage(named: "joystick")
         rotateJoystick.baseImage = UIImage(named: "dpad")
+
+        moveJoystick.on(.move) { [unowned self] joystick in self.master.handleMove(joystick: joystick) }
+        rotateJoystick.on(.move) { [unowned self] joystick in self.master.handleRotate(joystick: joystick) }
         
-        moveJoystick.on(.begin) { [unowned self] _ in
-        }
-        
-        moveJoystick.on(.move) { [unowned self] joystick in
-            self.master.handleMove(joystick: joystick)
-        }
-        
-        moveJoystick.on(.end) { [unowned self] _ in
-        }
-        
-        rotateJoystick.on(.move) { [unowned self] joystick in
-            self.master.handleRotate(joystick: joystick)
-        }
-        
-        rotateJoystick.on(.end) { [unowned self] _ in
-        }
+        view.isMultipleTouchEnabled = true
     }
 }

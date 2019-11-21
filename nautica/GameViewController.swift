@@ -50,7 +50,7 @@ class GameViewController: UIViewController {
         let lookAtConstraint = SCNLookAtConstraint(target: ship)
 
         let distanceConstraint = SCNDistanceConstraint(target: ship)
-        distanceConstraint.minimumDistance = 5 // set to whatever minimum distance between the camera and aircraft you'd like
+        distanceConstraint.minimumDistance = 15 // set to whatever minimum distance between the camera and aircraft you'd like
         distanceConstraint.maximumDistance = 15 // set to whatever maximum distance between the camera and aircraft you'd like
 
         cameraNode.constraints = [lookAtConstraint, distanceConstraint]
@@ -75,13 +75,17 @@ class GameViewController: UIViewController {
         scnView.overlaySKScene = JoystickOverlay(size: scnView.frame.size, master: self)
         scnView.allowsCameraControl = false
         
-        let box = SCNBox(width: 1, height: 1, length: 0.3, chamferRadius: 0.1)
-        let mat = SCNMaterial()
-        mat.emission.contents = UIColor.red
-        box.materials = [mat]
-        let boxNode = SCNNode(geometry: box)
-        boxNode.position = SCNVector3(x: 5, y: 5, z: 5)
-        scene.rootNode.addChildNode(boxNode)
+        for i in 0...10 {
+            for j in 0...10 {
+                let box = SCNBox(width: 1, height: 1, length: 0.3, chamferRadius: 0.1)
+                let mat = SCNMaterial()
+                mat.emission.contents = UIColor.red
+                box.materials = [mat]
+                let boxNode = SCNNode(geometry: box)
+                boxNode.position = SCNVector3(x: Float(i), y: Float(j), z: 1)
+                scene.rootNode.addChildNode(boxNode)
+            }
+        }
     }
     
     @objc func handleTap(_ gestureRecognize: UIGestureRecognizer) {

@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 
 class JoystickOverlay: SKScene {
-    let moveJoystick = TLAnalogJoystick(withDiameter: 100)
+    let moveJoystick = TLAnalogJoystick(withDiameter: 150)
     let rotateJoystick = TLAnalogJoystick(withDiameter: 100)
     
     var master: GameViewController!

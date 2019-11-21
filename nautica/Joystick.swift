@@ -59,7 +59,7 @@ open class TLAnalogJoystickHiddenArea: SKShapeNode {
     }
     
     private func cancelNode(_ node: SKNode) {
-        node.isHidden = true
+//        node.isHidden = true
     }
     
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

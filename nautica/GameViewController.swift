@@ -19,7 +19,7 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         // create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        let _scene = SCNScene(named: "art.scnassets/ship.scn")!
         
         // create and add a camera to the scene
         let cameraNode = SCNNode()
@@ -44,10 +44,11 @@ class GameViewController: UIViewController {
         scene.rootNode.addChildNode(ambientLightNode)
         
         // retrieve the ship node
-        ship = scene.rootNode.childNode(withName: "ship", recursively: true)!
+        ship = _scene.rootNode.childNode(withName: "ship", recursively: true)!
 //        ship.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
         
         let lookAtConstraint = SCNLookAtConstraint(target: ship)
+        lookAtConstraint.isGimbalLockEnabled = true
 
         let distanceConstraint = SCNDistanceConstraint(target: ship)
         distanceConstraint.minimumDistance = 15 // set to whatever minimum distance between the camera and aircraft you'd like

@@ -10,6 +10,17 @@ import UIKit
 import QuartzCore
 import SceneKit
 
+func mat(contents: Any?) -> SCNMaterial {
+    let mat = SCNMaterial()
+    mat.diffuse.contents = contents
+    mat.locksAmbientWithDiffuse = true
+    return mat
+}
+
+func mat(_ named: String) -> SCNMaterial {
+    return mat(contents: UIImage(named: named))
+}
+
 class GameViewController: UIViewController {
     var ship: SCNNode!
     var camera: SCNNode!
@@ -79,9 +90,7 @@ class GameViewController: UIViewController {
         for i in 0...10 {
             for j in 0...10 {
                 let box = SCNBox(width: 1, height: 1, length: 0.3, chamferRadius: 0.1)
-                let mat = SCNMaterial()
-                mat.emission.contents = UIColor.red
-                box.materials = [mat]
+                box.materials = [mat("top_top"), mat("top_side"), mat("top_side"), mat("top_side"), mat("top_side"), mat("top_bottom")]
                 let boxNode = SCNNode(geometry: box)
                 boxNode.position = SCNVector3(x: Float(i), y: Float(j), z: 1)
                 scene.rootNode.addChildNode(boxNode)

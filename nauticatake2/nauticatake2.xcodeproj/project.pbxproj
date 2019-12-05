@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9990189238ECEEB00D345CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9990188238ECEEB00D345CB /* AppDelegate.swift */; };
+		F999018B238ECEEB00D345CB /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F999018A238ECEEB00D345CB /* GameScene.sks */; };
+		F999018D238ECEEB00D345CB /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = F999018C238ECEEB00D345CB /* Actions.sks */; };
+		F999018F238ECEEB00D345CB /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F999018E238ECEEB00D345CB /* GameScene.swift */; };
+		F9990191238ECEEB00D345CB /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9990190238ECEEB00D345CB /* GameViewController.swift */; };
+		F9990194238ECEEB00D345CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9990192238ECEEB00D345CB /* Main.storyboard */; };
+		F9990196238ECEEE00D345CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9990195238ECEEE00D345CB /* Assets.xcassets */; };
+		F9990199238ECEEE00D345CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9990197238ECEEE00D345CB /* LaunchScreen.storyboard */; };
+		F99901A4238ECEEE00D345CB /* nauticatake2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99901A3238ECEEE00D345CB /* nauticatake2Tests.swift */; };
+		F99901AF238ECEEE00D345CB /* nauticatake2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99901AE238ECEEE00D345CB /* nauticatake2UITests.swift */; };
+		F99901BD238ECF1C00D345CB /* Joystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99901BC238ECF1C00D345CB /* Joystick.swift */; };
+		F99901BF238ECF3B00D345CB /* JoystickOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F99901BE238ECF3B00D345CB /* JoystickOverlay.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F99901A0238ECEEE00D345CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F999017D238ECEEA00D345CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9990184238ECEEA00D345CB;
+			remoteInfo = nauticatake2;
+		};
+		F99901AB238ECEEE00D345CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F999017D238ECEEA00D345CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9990184238ECEEA00D345CB;
+			remoteInfo = nauticatake2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F9990185238ECEEA00D345CB /* nauticatake2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nauticatake2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9990188238ECEEB00D345CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F999018A238ECEEB00D345CB /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		F999018C238ECEEB00D345CB /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		F999018E238ECEEB00D345CB /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		F9990190238ECEEB00D345CB /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		F9990193238ECEEB00D345CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9990195238ECEEE00D345CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9990198238ECEEE00D345CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F999019A238ECEEE00D345CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F999019F238ECEEE00D345CB /* nauticatake2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nauticatake2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F99901A3238ECEEE00D345CB /* nauticatake2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nauticatake2Tests.swift; sourceTree = "<group>"; };
+		F99901A5238ECEEE00D345CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F99901AA238ECEEE00D345CB /* nauticatake2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nauticatake2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F99901AE238ECEEE00D345CB /* nauticatake2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nauticatake2UITests.swift; sourceTree = "<group>"; };
+		F99901B0238ECEEE00D345CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F99901BC238ECF1C00D345CB /* Joystick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joystick.swift; sourceTree = "<group>"; };
+		F99901BE238ECF3B00D345CB /* JoystickOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoystickOverlay.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9990182238ECEEA00D345CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F999019C238ECEEE00D345CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F99901A7238ECEEE00D345CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F999017C238ECEEA00D345CB = {
+			isa = PBXGroup;
+			children = (
+				F9990187238ECEEA00D345CB /* nauticatake2 */,
+				F99901A2238ECEEE00D345CB /* nauticatake2Tests */,
+				F99901AD238ECEEE00D345CB /* nauticatake2UITests */,
+				F9990186238ECEEA00D345CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9990186238ECEEA00D345CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9990185238ECEEA00D345CB /* nauticatake2.app */,
+				F999019F238ECEEE00D345CB /* nauticatake2Tests.xctest */,
+				F99901AA238ECEEE00D345CB /* nauticatake2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9990187238ECEEA00D345CB /* nauticatake2 */ = {
+			isa = PBXGroup;
+			children = (
+				F99901BE238ECF3B00D345CB /* JoystickOverlay.swift */,
+				F9990188238ECEEB00D345CB /* AppDelegate.swift */,
+				F999018A238ECEEB00D345CB /* GameScene.sks */,
+				F999018C238ECEEB00D345CB /* Actions.sks */,
+				F999018E238ECEEB00D345CB /* GameScene.swift */,
+				F9990190238ECEEB00D345CB /* GameViewController.swift */,
+				F9990192238ECEEB00D345CB /* Main.storyboard */,
+				F9990195238ECEEE00D345CB /* Assets.xcassets */,
+				F9990197238ECEEE00D345CB /* LaunchScreen.storyboard */,
+				F999019A238ECEEE00D345CB /* Info.plist */,
+				F99901BC238ECF1C00D345CB /* Joystick.swift */,
+			);
+			path = nauticatake2;
+			sourceTree = "<group>";
+		};
+		F99901A2238ECEEE00D345CB /* nauticatake2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F99901A3238ECEEE00D345CB /* nauticatake2Tests.swift */,
+				F99901A5238ECEEE00D345CB /* Info.plist */,
+			);
+			path = nauticatake2Tests;
+			sourceTree = "<group>";
+		};
+		F99901AD238ECEEE00D345CB /* nauticatake2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				F99901AE238ECEEE00D345CB /* nauticatake2UITests.swift */,
+				F99901B0238ECEEE00D345CB /* Info.plist */,
+			);
+			path = nauticatake2UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9990184238ECEEA00D345CB /* nauticatake2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F99901B3238ECEEE00D345CB /* Build configuration list for PBXNativeTarget "nauticatake2" */;
+			buildPhases = (
+				F9990181238ECEEA00D345CB /* Sources */,
+				F9990182238ECEEA00D345CB /* Frameworks */,
+				F9990183238ECEEA00D345CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = nauticatake2;
+			productName = nauticatake2;
+			productReference = F9990185238ECEEA00D345CB /* nauticatake2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F999019E238ECEEE00D345CB /* nauticatake2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F99901B6238ECEEE00D345CB /* Build configuration list for PBXNativeTarget "nauticatake2Tests" */;
+			buildPhases = (
+				F999019B238ECEEE00D345CB /* Sources */,
+				F999019C238ECEEE00D345CB /* Frameworks */,
+				F999019D238ECEEE00D345CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F99901A1238ECEEE00D345CB /* PBXTargetDependency */,
+			);
+			name = nauticatake2Tests;
+			productName = nauticatake2Tests;
+			productReference = F999019F238ECEEE00D345CB /* nauticatake2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F99901A9238ECEEE00D345CB /* nauticatake2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F99901B9238ECEEE00D345CB /* Build configuration list for PBXNativeTarget "nauticatake2UITests" */;
+			buildPhases = (
+				F99901A6238ECEEE00D345CB /* Sources */,
+				F99901A7238ECEEE00D345CB /* Frameworks */,
+				F99901A8238ECEEE00D345CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F99901AC238ECEEE00D345CB /* PBXTargetDependency */,
+			);
+			name = nauticatake2UITests;
+			productName = nauticatake2UITests;
+			productReference = F99901AA238ECEEE00D345CB /* nauticatake2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F999017D238ECEEA00D345CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = Innoviox;
+				TargetAttributes = {
+					F9990184238ECEEA00D345CB = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					F999019E238ECEEE00D345CB = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = F9990184238ECEEA00D345CB;
+					};
+					F99901A9238ECEEE00D345CB = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = F9990184238ECEEA00D345CB;
+					};
+				};
+			};
+			buildConfigurationList = F9990180238ECEEA00D345CB /* Build configuration list for PBXProject "nauticatake2" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F999017C238ECEEA00D345CB;
+			productRefGroup = F9990186238ECEEA00D345CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9990184238ECEEA00D345CB /* nauticatake2 */,
+				F999019E238ECEEE00D345CB /* nauticatake2Tests */,
+				F99901A9238ECEEE00D345CB /* nauticatake2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9990183238ECEEA00D345CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9990194238ECEEB00D345CB /* Main.storyboard in Resources */,
+				F999018B238ECEEB00D345CB /* GameScene.sks in Resources */,
+				F9990196238ECEEE00D345CB /* Assets.xcassets in Resources */,
+				F9990199238ECEEE00D345CB /* LaunchScreen.storyboard in Resources */,
+				F999018D238ECEEB00D345CB /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F999019D238ECEEE00D345CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F99901A8238ECEEE00D345CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9990181238ECEEA00D345CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F999018F238ECEEB00D345CB /* GameScene.swift in Sources */,
+				F99901BD238ECF1C00D345CB /* Joystick.swift in Sources */,
+				F9990191238ECEEB00D345CB /* GameViewController.swift in Sources */,
+				F99901BF238ECF3B00D345CB /* JoystickOverlay.swift in Sources */,
+				F9990189238ECEEB00D345CB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F999019B238ECEEE00D345CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F99901A4238ECEEE00D345CB /* nauticatake2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F99901A6238ECEEE00D345CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F99901AF238ECEEE00D345CB /* nauticatake2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F99901A1238ECEEE00D345CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9990184238ECEEA00D345CB /* nauticatake2 */;
+			targetProxy = F99901A0238ECEEE00D345CB /* PBXContainerItemProxy */;
+		};
+		F99901AC238ECEEE00D345CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9990184238ECEEA00D345CB /* nauticatake2 */;
+			targetProxy = F99901AB238ECEEE00D345CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F9990192238ECEEB00D345CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9990193238ECEEB00D345CB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9990197238ECEEE00D345CB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9990198238ECEEE00D345CB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F99901B1238ECEEE00D345CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F99901B2238ECEEE00D345CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F99901B4238ECEEE00D345CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SM7F898GQH;
+				INFOPLIST_FILE = nauticatake2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.innoviox.nauticatake2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F99901B5238ECEEE00D345CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SM7F898GQH;
+				INFOPLIST_FILE = nauticatake2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.innoviox.nauticatake2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F99901B7238ECEEE00D345CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SM7F898GQH;
+				INFOPLIST_FILE = nauticatake2Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.innoviox.nauticatake2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nauticatake2.app/nauticatake2";
+			};
+			name = Debug;
+		};
+		F99901B8238ECEEE00D345CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SM7F898GQH;
+				INFOPLIST_FILE = nauticatake2Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.innoviox.nauticatake2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nauticatake2.app/nauticatake2";
+			};
+			name = Release;
+		};
+		F99901BA238ECEEE00D345CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SM7F898GQH;
+				INFOPLIST_FILE = nauticatake2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.innoviox.nauticatake2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = nauticatake2;
+			};
+			name = Debug;
+		};
+		F99901BB238ECEEE00D345CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SM7F898GQH;
+				INFOPLIST_FILE = nauticatake2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.innoviox.nauticatake2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = nauticatake2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9990180238ECEEA00D345CB /* Build configuration list for PBXProject "nauticatake2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F99901B1238ECEEE00D345CB /* Debug */,
+				F99901B2238ECEEE00D345CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F99901B3238ECEEE00D345CB /* Build configuration list for PBXNativeTarget "nauticatake2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F99901B4238ECEEE00D345CB /* Debug */,
+				F99901B5238ECEEE00D345CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F99901B6238ECEEE00D345CB /* Build configuration list for PBXNativeTarget "nauticatake2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F99901B7238ECEEE00D345CB /* Debug */,
+				F99901B8238ECEEE00D345CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F99901B9238ECEEE00D345CB /* Build configuration list for PBXNativeTarget "nauticatake2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F99901BA238ECEEE00D345CB /* Debug */,
+				F99901BB238ECEEE00D345CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F999017D238ECEEA00D345CB /* Project object */;
+}
